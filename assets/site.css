@@ -57,19 +57,3 @@ footer nav{ display:flex; gap:18px; justify-content:center; flex-wrap:wrap; marg
 .strip{ display:block; margin:0 auto; width:100%; max-width:1000px; }
 .letter{ max-width:640px; margin:0 auto; background:#fff8e6; color:#4a3410; border-radius:8px; padding:30px 34px; font-size:20px; font-style:italic; box-shadow:0 12px 30px rgba(0,0,0,.12); transform:rotate(-1deg); border:1px solid #f0dfb0; }
 .letter b{ font-style:normal; display:block; margin-top:12px; text-align:right; }
-/* Goldie */
-.goldie-hero{ position:relative; text-align:center; padding:60px 20px 150px; background:radial-gradient(circle at 82% 12%, #fff6c8 0 60px, #ffe28a 61px 90px, transparent 91px), linear-gradient(180deg,#ffd27a 0%,#ffe6a8 38%,#fff3d6 68%,#c6e8a0 100%); color:#1d2a3a; overflow:hidden; }
-.goldie-hero::after{ content:''; position:absolute; left:-10%; right:-10%; bottom:-2px; height:140px; background:radial-gradient(60% 120% at 30% 100%, #8fcf5e 60%, transparent 61%), radial-gradient(55% 110% at 78% 100%, #a3dc72 60%, transparent 61%); }
-.goldie-hero .icon{ width:132px; border-radius:30px; box-shadow:0 14px 30px rgba(0,0,0,.2); }
-.logo-goldie{ margin:14px 0 8px; font-weight:800; } .logo-goldie span{ display:block; }
-.logo-goldie .l1{ font-size:clamp(60px,12vw,104px); line-height:.9; color:#ffc93c; -webkit-text-stroke:5px #6b3d10; paint-order:stroke fill; text-shadow:0 6px 0 #6b3d10; }
-.logo-goldie .l2{ font-size:26px; color:#6b3d10; line-height:1.3; }
-.logo-goldie .l3{ font-size:clamp(40px,8vw,64px); line-height:1; color:#fff; -webkit-text-stroke:4px #6b3d10; paint-order:stroke fill; text-shadow:0 5px 0 #6b3d10; }
-.goldie-hero .lead{ color:#4a3410; max-width:620px; margin:16px auto 0; position:relative; z-index:1; }
-.goldie-hero .btns{ position:relative; z-index:1; }
-.btn svg{ flex:none; }
-.shots.wide .phone{ width:min(520px,82vw); border-radius:30px; }
-.shots.wide .phone img{ height:auto; aspect-ratio:1920/888; border-radius:22px; }
-.shots.wide .phone::before{ top:50%; left:14px; transform:translateY(-50%); width:16px; height:56px; }
-.goldie-note{ text-align:center; }
-.gamecard + .gamecard{ margin-top:26px; }
