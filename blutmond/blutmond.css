@@ -1,0 +1,42 @@
+/* Blutmond – eigene Stile (ergänzt /assets/site.css) */
+.blutmond-hero{ position:relative; text-align:center; padding:30px 20px 70px; color:#ece2cf; overflow:hidden;
+  background:radial-gradient(ellipse at 50% 34%, #3a0d1e 0, transparent 58%), linear-gradient(#0c0816, #140e22 80%); }
+.mondbild{ position:relative; width:min(70vw,400px); aspect-ratio:1; margin:0 auto; }
+.mond{ position:absolute; inset:6%; border-radius:50%; background:radial-gradient(circle at 38% 34%, #ff8a72 0, #e8433a 28%, #a1122a 62%, #45060f 100%); box-shadow:0 0 90px #d8323a88, 0 0 220px #8e112955; }
+.mond::after{ content:""; position:absolute; inset:0; border-radius:50%; background:radial-gradient(circle at 63% 58%, #4a061266 0 8%, transparent 9%), radial-gradient(circle at 28% 66%, #4a061255 0 6%, transparent 7%), radial-gradient(circle at 56% 24%, #4a061255 0 5%, transparent 6%); }
+.nyra{ position:absolute; left:50%; bottom:-2%; transform:translateX(-50%); height:74%; width:auto; image-rendering:pixelated; filter:drop-shadow(0 0 26px #000); }
+.logo-blutmond{ position:relative; font-family:"Jacquard 12", "Baloo 2", serif; font-weight:400; font-size:clamp(80px,15vw,160px); line-height:.85; margin:-10px 0 0; letter-spacing:.01em; color:#ece2cf; text-shadow:0 6px 0 #8e1129, 0 0 40px #000; }
+.unterzeile{ font-family:"Spectral", Georgia, serif; font-style:italic; font-size:clamp(18px,2.4vw,22px); color:#c9bfd9; margin:16px auto 0; max-width:40ch; }
+.status{ display:inline-block; margin-top:24px; padding:8px 18px; border:1px solid #d8323a88; border-radius:999px; font-size:15px; font-weight:700; color:#ece2cf; background:#1e163099; }
+@media (prefers-reduced-motion: no-preference){
+  .mond{ animation:bm-aufgang 2.2s cubic-bezier(.2,.7,.2,1) both; }
+  .nyra{ animation:bm-erwachen 1.4s .9s ease-out both; }
+  @keyframes bm-aufgang{ from{ transform:translateY(18%); opacity:0 } to{ transform:none; opacity:1 } }
+  @keyframes bm-erwachen{ from{ opacity:0 } to{ opacity:1 } }
+}
+
+/* Geschichte: dunkles Band unter dem Hero */
+.geschichte{ background:#140e22; color:#ece2cf; padding:10px 0 70px; }
+.geschichte .wrap{ max-width:62ch; font-family:"Spectral", Georgia, serif; font-size:20px; line-height:1.7; }
+.geschichte p:first-child::first-letter{ font-family:"Jacquard 12", serif; float:left; font-size:4.6em; line-height:.8; margin:.06em .1em 0 0; color:#d8323a; }
+
+/* Bilder aus dem Spiel */
+.bm-gallery{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:30px 26px; }
+.bm-gallery .gross{ grid-column:1/-1; }
+.shot{ margin:0; }
+.shot button{ all:unset; display:block; width:100%; cursor:zoom-in; border-radius:18px; }
+.shot button:focus-visible{ outline:3px solid var(--gold); outline-offset:4px; }
+.shot img{ display:block; width:100%; height:auto; aspect-ratio:1920/900; object-fit:cover; image-rendering:pixelated; border-radius:18px; border:6px solid #140e22; background:#000; box-shadow:0 16px 36px rgba(20,14,34,.3); transition:transform .2s, box-shadow .2s; }
+.shot button:hover img{ transform:translateY(-4px); box-shadow:0 22px 44px rgba(20,14,34,.38); }
+.shot figcaption{ text-align:center; margin-top:10px; font-size:15px; font-weight:700; color:var(--soft); }
+@media (max-width:700px){ .bm-gallery{ grid-template-columns:1fr; gap:24px; } .shot img{ border-width:4px; border-radius:14px; } }
+
+/* Vergrößerte Ansicht */
+.lightbox{ border:none; padding:0; background:transparent; max-width:min(1200px,94vw); width:100%; }
+.lightbox::backdrop{ background:rgba(10,6,16,.86); }
+.lightbox img{ display:block; width:100%; height:auto; image-rendering:pixelated; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,.5); }
+.lightbox p{ color:#fff; text-align:center; font-weight:700; margin:12px 0 0; }
+.lightbox .close{ position:absolute; top:10px; right:10px; width:40px; height:40px; border:none; border-radius:50%; background:rgba(0,0,0,.6); color:#fff; font-size:24px; line-height:40px; cursor:pointer; }
+.lightbox .nav{ position:absolute; top:50%; transform:translateY(-50%); width:44px; height:44px; border:none; border-radius:50%; background:rgba(0,0,0,.6); color:#fff; font-size:26px; cursor:pointer; }
+.lightbox .prev{ left:10px; } .lightbox .next{ right:10px; }
+.blutmond-features{ grid-template-columns:repeat(3,minmax(0,1fr)); } @media (max-width:860px){ .blutmond-features{ grid-template-columns:repeat(2,minmax(0,1fr)); } } @media (max-width:560px){ .blutmond-features{ grid-template-columns:1fr; } }
