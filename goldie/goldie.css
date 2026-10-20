@@ -1,0 +1,34 @@
+/* Goldies großes Abenteuer – eigene Stile (ergänzt /assets/site.css) */
+.goldie-hero{ position:relative; text-align:center; padding:56px 20px 150px; background:radial-gradient(circle at 84% 14%, #fff6c8 0 56px, #ffe28a 57px 86px, transparent 87px), linear-gradient(180deg,#ffd27a 0%,#ffe6a8 38%,#fff3d6 68%,#c6e8a0 100%); color:#1d2a3a; overflow:hidden; }
+.goldie-hero::after{ content:''; position:absolute; left:-10%; right:-10%; bottom:-2px; height:140px; background:radial-gradient(60% 120% at 30% 100%, #8fcf5e 60%, transparent 61%), radial-gradient(55% 110% at 78% 100%, #a3dc72 60%, transparent 61%); }
+.goldie-hero .icon{ width:132px; height:132px; border-radius:30px; box-shadow:0 14px 30px rgba(0,0,0,.2); }
+.logo-goldie{ margin:14px 0 8px; font-weight:800; line-height:1; } .logo-goldie span{ display:block; }
+.logo-goldie .l1{ font-size:clamp(60px,12vw,104px); line-height:.9; color:#ffc93c; -webkit-text-stroke:5px #6b3d10; paint-order:stroke fill; text-shadow:0 6px 0 #6b3d10; }
+.logo-goldie .l2{ font-size:26px; color:#6b3d10; line-height:1.3; }
+.logo-goldie .l3{ font-size:clamp(40px,8vw,64px); color:#fff; -webkit-text-stroke:4px #6b3d10; paint-order:stroke fill; text-shadow:0 5px 0 #6b3d10; }
+.goldie-hero .lead{ color:#4a3410; max-width:620px; margin:16px auto 0; position:relative; z-index:1; }
+.goldie-hero .btns{ position:relative; z-index:1; }
+.btn svg{ flex:none; }
+
+/* Screenshots: Raster mit liegenden Handys */
+.gallery{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:34px 30px; max-width:1000px; margin:0 auto; }
+.shot{ margin:0; }
+.shot button{ all:unset; display:block; width:100%; cursor:zoom-in; border-radius:26px; }
+.shot button:focus-visible{ outline:3px solid var(--gold); outline-offset:4px; }
+.device{ position:relative; display:block; background:#111; border-radius:26px; padding:8px 10px 8px 22px; box-shadow:0 16px 36px rgba(20,38,63,.22); transition:transform .2s, box-shadow .2s; }
+.device::before{ content:''; position:absolute; left:8px; top:50%; transform:translateY(-50%); width:6px; height:46px; border-radius:4px; background:#2a2a2a; }
+.device img{ display:block; width:100%; height:auto; aspect-ratio:1920/888; object-fit:cover; border-radius:18px; background:#cfe8f5; }
+.shot button:hover .device{ transform:translateY(-4px); box-shadow:0 22px 44px rgba(20,38,63,.28); }
+.shot figcaption{ text-align:center; margin-top:12px; font-size:15px; font-weight:700; color:var(--soft); }
+@media (max-width:700px){ .gallery{ grid-template-columns:1fr; gap:26px; } .device{ border-radius:20px; padding:6px 7px 6px 16px; } .device img{ border-radius:14px; } .device::before{ left:6px; height:34px; width:4px; } }
+
+/* Vergrößerte Ansicht */
+.lightbox{ border:none; padding:0; background:transparent; max-width:min(1200px,94vw); width:100%; }
+.lightbox::backdrop{ background:rgba(10,16,26,.82); }
+.lightbox img{ display:block; width:100%; height:auto; border-radius:16px; box-shadow:0 20px 60px rgba(0,0,0,.5); }
+.lightbox p{ color:#fff; text-align:center; font-weight:700; margin:12px 0 0; }
+.lightbox .close{ position:absolute; top:10px; right:10px; width:40px; height:40px; border:none; border-radius:50%; background:rgba(0,0,0,.55); color:#fff; font-size:24px; line-height:40px; cursor:pointer; }
+.lightbox .nav{ position:absolute; top:50%; transform:translateY(-50%); width:44px; height:44px; border:none; border-radius:50%; background:rgba(0,0,0,.55); color:#fff; font-size:26px; cursor:pointer; }
+.lightbox .prev{ left:10px; } .lightbox .next{ right:10px; }
+
+.goldie-note{ text-align:center; }
