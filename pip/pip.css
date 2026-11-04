@@ -1,0 +1,57 @@
+:root{--bg:#0F1530;--card:#182150;--ink:#F3EEE4;--soft:#B8C2DC;--accent:#F0B25A;--accent2:#F6CF86;--gold:#F0B25A;--line:#2A3566}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 ui-rounded,"SF Pro Rounded","Nunito","Segoe UI",system-ui,-apple-system,sans-serif}
+a{color:var(--accent2)}a:hover{color:var(--ink)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:5;background:rgba(15,21,48,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;gap:16px;min-height:62px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;text-decoration:none;color:var(--ink);margin-right:auto}
+.brand img{width:36px;height:36px}
+nav{display:flex;gap:4px;flex-wrap:wrap}
+nav a{text-decoration:none;color:var(--ink);padding:6px 12px;border-radius:999px;font-size:15px}
+nav a:hover,nav a[aria-current=page]{background:#2A3566}
+h1,h2,h3{line-height:1.2}
+.hero{text-align:center;padding:48px 0 24px}
+.hero img.icon{width:128px;height:128px;border-radius:28px;box-shadow:0 10px 30px rgba(78,59,44,.18)}
+.hero h1{font-size:clamp(36px,6vw,58px);margin:18px 0 8px}
+.hero p{max-width:640px;margin:0 auto 22px;color:var(--soft);font-size:19px}
+.badges{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.badge{display:inline-flex;align-items:center;gap:10px;background:#F3EEE4;color:#0F1530;border-radius:14px;padding:10px 18px;text-decoration:none;font-size:15px}
+.badge b{font-size:18px}
+.badge:hover{color:#0F1530;opacity:.9}
+section{padding:36px 0}
+section h2{font-size:30px;text-align:center;margin:0 0 6px}
+section .lead{text-align:center;color:var(--soft);margin:0 auto 26px;max-width:660px}
+.shots{display:flex;gap:16px;overflow-x:auto;padding:4px 4px 16px;scroll-snap-type:x mandatory}
+.shots figure{margin:0;flex:0 0 min(560px,86vw);scroll-snap-align:center}
+.shots img{width:100%;height:auto;border-radius:18px;box-shadow:0 8px 24px rgba(78,59,44,.16);display:block}
+.shots figcaption{text-align:center;color:var(--soft);font-style:italic;margin-top:8px;font-size:15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.feat{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px}
+.feat .e{font-size:30px}
+.feat h3{margin:6px 0 4px;font-size:19px}
+.feat p{margin:0;color:var(--soft);font-size:16px}
+.quote{background:var(--card);border-left:5px solid var(--gold);border-radius:14px;padding:18px 22px;max-width:720px;margin:0 auto;font-size:19px}
+.cta{text-align:center;padding:40px 0 56px}
+main.doc{max-width:780px;margin:0 auto;padding:36px 20px 56px}
+main.doc h1{font-size:38px;margin:0 0 12px}
+main.doc h2{font-size:22px;margin:30px 0 6px}
+.tldr{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 18px}
+footer{border-top:1px solid var(--line);padding:26px 0 34px;font-size:15px;color:var(--soft)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
+footer nav a{font-size:14px}
+footer .copy{display:flex;gap:8px;align-items:center}
+footer .copy img{width:22px;height:22px}
+
+html{background:#0F1530;color-scheme:dark}
+body{background:linear-gradient(180deg,#0F1530 0%,#1B1840 50%,#0F1530 100%);min-height:100vh}
+.hero h1{font-family:"Fraunces",Georgia,serif;color:var(--accent2)}
+section h2,.cta h2,main.doc h1{font-family:"Fraunces",Georgia,serif;color:var(--accent2)}
+.shots img{box-shadow:0 8px 28px rgba(0,0,0,.45);border:2px solid rgba(240,178,90,.45)}
+.badge.soon{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 18px;margin:0 auto 12px;max-width:760px}
+.faq summary{font-weight:700;cursor:pointer}
+.faq p{margin:8px 0 0;color:var(--soft)}
+.tldr{background:var(--card)}
+
